@@ -1,0 +1,162 @@
+/* =====================================================
+  1. VARIABLES GLOBALES (Design Tokens)
+===================================================== */
+
+:root {
+  /* Colores base */
+  --color-bg-main: #0e0f13; /* negro/gris muy oscuro */
+  --color-bg-surface: rgba(255, 255, 255, 0.06);
+  --color-text-primary: #e5e7eb;
+  --color-text-secondary: #9ca3af;
+
+  /* Acento */
+  --color-accent: #8b5cf6; /* violeta tech */
+
+  /* Bordes y radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* Sombras */
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.35);
+
+  /* Tipografía */
+  --font-main: 'Inter', 'Roboto', system-ui, sans-serif;
+}
+
+/* =====================================================
+  2. RESET CSS
+===================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+  3. BASE GLOBAL
+===================================================== */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================================================
+  4. LAYOUT GLOBAL
+===================================================== */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* =====================================================
+  5. CLASES UTILITARIAS MÍNIMAS
+===================================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 2rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+
+/* =====================================================
+  6. GLASSMORPHISM (REUTILIZABLE)
+===================================================== */
+
+.glass {
+  background: var(--color-bg-surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================================
+  7. ACCESIBILIDAD Y DETALLES
+===================================================== */
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* ===============================
+Vuetify background override
+=============================== */
+
+html,
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+}
+
+.v-application {
+  background-color: var(--color-bg-main) !important;
+  color: var(--color-text-primary);
+}
+
+.v-application__wrap {
+  min-height: 100vh;
+  background-color: var(--color-bg-main);
+}

@@ -1,24 +1,27 @@
 <template>
   <v-app>
+    <!-- Barra de navegación superior (siempre visible) -->
+    <AppNavbar />
+
+    <!-- Contenido central que cambia según la ruta -->
     <v-main>
-      <v-container class="fill-height">
-        <v-row align="center" justify="center">
-          <v-col cols="12" md="6" class="text-center">
-            <v-icon size="100" color="primary">mdi-check-circle</v-icon>
-            <h1 class="text-h2 mt-4">¡Vuetify funciona!</h1>
-            <p class="text-h6 mt-2">Tu entorno está listo</p>
-            <v-btn color="primary" size="large" class="mt-6">
-              Mi Portafolio
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-container>
+      <RouterView />
     </v-main>
+
+    <!-- Footer siempre visible -->
+    <AppFooter />
   </v-app>
 </template>
 
 <script setup>
-// No necesita lógica para esta prueba
+// Componentes globales de layout
+import AppNavbar from '@/components/AppNavbar.vue'
+import AppFooter from '@/components/AppFooter.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+/*
+  App.vue casi no debería tener estilos.
+  Solo estilos MUY generales si son necesarios.
+*/
+</style>

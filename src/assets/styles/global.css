@@ -76,6 +76,15 @@ img {
   padding: 1rem;
 }
 
+.v-application__wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.v-main {
+  flex: 1;
+}
 /* =====================================================
   5. CLASES UTILITARIAS MÍNIMAS
 ===================================================== */

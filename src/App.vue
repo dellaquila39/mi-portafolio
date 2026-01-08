@@ -19,9 +19,4 @@ import AppNavbar from '@/components/AppNavbar.vue'
 import AppFooter from '@/components/AppFooter.vue'
 </script>
 
-<style scoped>
-/*
-  App.vue casi no debería tener estilos.
-  Solo estilos MUY generales si son necesarios.
-*/
-</style>
+<style scoped></style>

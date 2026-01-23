@@ -7,7 +7,7 @@
           <span class="text-accent">Proyectos</span> personales
         </h1>
         <p class="text-body-1 text-md-h6 text-surface">
-          Experiencias digitales modernas y funcionales
+          Experiencias digitales en desarrollo y programación.
         </p>
       </v-col>
     </v-row>
@@ -154,7 +154,7 @@
     <!-- CTA -->
     <v-row class="mt-8 mt-md-12 mb-10" justify="center">
       <v-col cols="12" class="text-center">
-        <p class="text-body-1 text-primary mb-4">¿Tienes un proyecto en mente?</p>
+        <p class="text-body-1 text-primary mb-4">¿Quieres conocer más?</p>
         <v-btn
           variant="outlined"
           color="accent"

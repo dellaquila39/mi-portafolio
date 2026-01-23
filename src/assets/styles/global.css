@@ -173,3 +173,33 @@ body {
 .bg-gradient-overlay {
   background: linear-gradient(to top, rgba(14, 15, 19, 0.7), transparent);
 }
+
+/* =====================================================
+  8. SOCIAL COLOR TOKENS
+===================================================== */
+
+:root {
+  /* WhatsApp */
+  --color-social-whatsapp: #25d366;
+  --color-social-whatsapp-soft: rgba(37, 211, 102, 0.12);
+
+  /* Email (Gmail) */
+  --color-social-email: #ea4335;
+  --color-social-email-soft: rgba(234, 67, 53, 0.12);
+
+  /* LinkedIn */
+  --color-social-linkedin: #0a66c2;
+  --color-social-linkedin-soft: rgba(10, 102, 194, 0.12);
+
+  /* GitHub - Ajustado para contraste en dark mode */
+  --color-social-github: #c9d1d9;
+  --color-social-github-soft: rgba(201, 209, 217, 0.12);
+
+  /* Slack */
+  --color-social-slack: #4a154b;
+  --color-social-slack-soft: rgba(74, 21, 75, 0.12);
+
+  /* Microsoft Teams */
+  --color-social-teams: #6264a7;
+  --color-social-teams-soft: rgba(98, 100, 167, 0.12);
+}

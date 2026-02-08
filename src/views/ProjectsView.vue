@@ -6,8 +6,8 @@
         <h1 class="text-h4 text-md-h3 font-weight-bold mb-2">
           <span class="text-accent">Proyectos</span> personales
         </h1>
-        <p class="text-body-1 text-md-h6 text-surface">
-          Experiencias digitales en desarrollo y programación.
+        <p class="text-body-1 text-md-h6 text-text">
+          Experiencias digitales en <span class="text-accent">desarrollo y programación</span>.
         </p>
       </v-col>
     </v-row>

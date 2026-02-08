@@ -6,8 +6,9 @@
         <h2 class="text-h4 text-md-h3 font-weight-bold mb-4">
           Hablemos, <span class="text-accent">sin compromisos</span>
         </h2>
-        <p class="text-body-1 text-md-h6 text-secondary">
-          Si llegaste hasta acá, probablemente tengamos algo interesante para charlar.
+        <p class="text-body-1 text-md-h6 text-text">
+          Si llegaste hasta acá,
+          <span class="text-accent">probablemente tengamos algo interesante para charlar.</span>
         </p>
       </v-col>
     </v-row>
@@ -100,7 +101,7 @@
     <!-- final -->
     <v-row class="mx-0 mx-md-3 mt-8" justify="center">
       <v-col cols="12" md="8" lg="6" class="text-center">
-        <p class="text-body-2 text-secondary">
+        <p class="text-body-3 text-primary">
           Sin formularios, sin burocracia. Solo conversación directa cuando quieras.
         </p>
       </v-col>
@@ -124,7 +125,7 @@ const channels = [
     message:
       'Perfecto para charlas rápidas y directas. Respondo en minutos, ideal para resolver dudas al instante.',
     actionText: 'Escribir por WhatsApp',
-    actionLink: 'https://wa.me/1138185204',
+    actionLink: 'https://wa.me/5491138185204',
   },
   {
     id: 'email',

@@ -1,342 +1,243 @@
 <template>
-  <!-- Contenedor principal -->
-  <div class="home-view">
-    <!-- Sección 1: Hero - Presentación impactante -->
-    <section class="hero-section" ref="heroSection">
-      <v-container class="hero-container">
-        <v-row align="center" justify="center" class="hero-row">
-          <v-col cols="12" lg="8" class="text-center">
-            <!-- Titulo y Enfoque -->
-            <div class="intro-badge">
-              <span class="badge-text">Desarrollador Web & Product Thinker</span>
-            </div>
-
-            <!-- Título principal -->
-            <h1 class="hero-title">
-              <span class="title-line">Transformo</span>
-              <span class="title-line accent-line">
-                ideas <span class="highlight">en experiencias</span>
-              </span>
-              <span class="title-line">digitales</span>
+  <main class="home-view">
+    <!-- Sección Hero/Bienvenida -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <v-container>
+        <v-row align="center" justify="center" class="hero-content">
+          <v-col cols="12" class="text-center">
+            <h1 id="hero-title" class="hero-title">
+              <span class="text-accent">Agustin Dell Aquila</span>
+              <span class="hero-subtitle text-text">Portafolio Profesional</span>
             </h1>
-
-            <!-- Subtítulo -->
-            <p class="hero-subtitle">
-              No solo escribo código. Diseño soluciones que
-              <span class="accent-text">resuelven problemas reales</span>
-              y generan valor tangible para los usuarios y el negocio.
+            <p class="hero-description mt-2 text-text">
+              Desarrollador Frontend especializado en <span class="social-vue">Vue.js</span> ·
+              Transformando ideas en productos digitales.
             </p>
-
-            <!-- CTA principal -->
-            <div class="hero-actions">
-              <v-btn
-                color="primary"
-                size="large"
-                class="primary-btn"
-                @click="scrollToProjects"
-                variant="flat"
-              >
-                <v-icon left>mdi-rocket-launch</v-icon>
-                Ver mis proyectos
-              </v-btn>
-
-              <v-btn
-                color="surface"
-                size="large"
-                class="secondary-btn"
-                href="#philosophy"
-                variant="text"
-              >
-                <v-icon left>mdi-arrow-down</v-icon>
-                Conoce mi enfoque
-              </v-btn>
-            </div>
-
-            <!-- Scroll indicator -->
-            <div class="scroll-indicator" @click="scrollToPhilosophy">
-              <div class="scroll-line"></div>
-              <v-icon size="20" class="scroll-icon">mdi-chevron-double-down</v-icon>
-            </div>
           </v-col>
         </v-row>
       </v-container>
     </section>
 
-    <!-- Sección 2: Filosofía de trabajo -->
-    <section id="philosophy" class="philosophy-section" ref="philosophySection">
+    <!-- Sección Filosofía -->
+    <section class="philosophy-section" aria-labelledby="philosophy-title">
       <v-container>
         <v-row>
-          <!-- Columna izquierda: Título y texto -->
-          <v-col cols="12" lg="5" class="philosophy-text">
-            <div class="section-label">
-              <v-icon size="18">mdi-lightbulb-on</v-icon>
-              <span>Mi filosofía</span>
-            </div>
+          <v-col cols="12">
+            <header class="section-header">
+              <h2 id="philosophy-title" class="section-title">
+                Mi <span class="text-accent">Enfoque de Desarrollo</span>
+              </h2>
+              <p class="section-subtitle text-text">
+                Del código al producto:
+                <span class="text-accent">una historia de transformación</span>
+              </p>
+            </header>
+          </v-col>
+        </v-row>
 
-            <h2 class="section-title">
-              El código es solo <span class="accent-text">la herramienta</span>, <br />el producto
-              es <span class="accent-text">el resultado</span>
-            </h2>
-
-            <p class="philosophy-content">
-              Creo que el verdadero valor en el desarrollo web no está en las líneas de código, sino
-              en cómo esas líneas se traducen en
-              <strong>soluciones que las personas aman usar</strong>.
-            </p>
-
-            <div class="philosophy-points">
-              <div class="point">
-                <v-icon size="24" color="primary">mdi-target</v-icon>
-                <div>
-                  <h4>Enfoque centrado en el usuario</h4>
-                  <p>Cada decisión técnica está alineada con la experiencia final del usuario.</p>
-                </div>
-              </div>
-
-              <div class="point">
-                <v-icon size="24" color="primary">mdi-chart-timeline</v-icon>
-                <div>
-                  <h4>Iteración constante</h4>
-                  <p>
-                    Prefiero lanzar rápido, aprender y mejorar, que buscar la perfección desde el
-                    día uno.
-                  </p>
-                </div>
-              </div>
-
-              <div class="point">
-                <v-icon size="24" color="primary">mdi-puzzle</v-icon>
-                <div>
-                  <h4>Producto > Código</h4>
-                  <p>
-                    Mi mejor habilidad no es programar, es entender qué hay que construir y por qué.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <v-row class="philosophy-steps">
+          <v-col cols="12" md="4">
+            <article class="philosophy-card glass">
+              <div class="step-number">01</div>
+              <h3 class="step-title">Visión del Producto</h3>
+              <p class="step-description">
+                Antes de empezar a programar, me tomo el tiempo de entender el objetivo del proyecto
+                y a quién está dirigido, para desarrollar soluciones que realmente aporten valor.
+              </p>
+            </article>
           </v-col>
 
-          <!-- Columna derecha: Visualización -->
-          <v-col cols="12" lg="7" class="philosophy-visual">
-            <div class="visual-container">
-              <!-- Card 1: Idea -->
-              <div class="idea-card glass-card" :class="{ visible: isVisible }">
-                <div class="card-header">
-                  <v-icon size="28" color="primary">mdi-brain</v-icon>
-                  <h3>Idea</h3>
-                </div>
-                <p>Identificación del problema y concepción de la solución</p>
-              </div>
+          <v-col cols="12" md="4">
+            <article class="philosophy-card glass">
+              <div class="step-number">02</div>
+              <h3 class="step-title">Arquitectura Iterativa</h3>
+              <p class="step-description">
+                Trabajo en ciclos cortos, priorizando una base funcional desde el inicio. A partir
+                del feedback, voy mejorando la estructura del proyecto y agregando nuevas
+                funcionalidades de forma progresiva.
+              </p>
+            </article>
+          </v-col>
 
-              <!-- Card 2: Diseño -->
-              <div class="design-card glass-card" :class="{ visible: isVisible }">
-                <div class="card-header">
-                  <v-icon size="28" color="primary">mdi-pencil-ruler</v-icon>
-                  <h3>Diseño</h3>
-                </div>
-                <p>Prototipado y validación de la experiencia de usuario</p>
-              </div>
+          <v-col cols="12" md="4">
+            <article class="philosophy-card glass">
+              <div class="step-number">03</div>
+              <h3 class="step-title">Entrega de Valor</h3>
+              <p class="step-description">
+                Cada commit debe aportar valor tangible. Optimizo procesos, automatizo tareas
+                repetitivas y documento decisiones técnicas para equipos futuros.
+              </p>
+            </article>
+          </v-col>
+        </v-row>
 
-              <!-- Card 3: Desarrollo -->
-              <div class="dev-card glass-card" :class="{ visible: isVisible }">
-                <div class="card-header">
-                  <v-icon size="28" color="primary">mdi-code-braces</v-icon>
-                  <h3>Desarrollo</h3>
-                </div>
-                <p>Implementación técnica con mejores prácticas y escalabilidad</p>
-              </div>
-
-              <!-- Card 4: Producto -->
-              <div class="product-card glass-card highlight-card" :class="{ visible: isVisible }">
-                <div class="card-header">
-                  <v-icon size="28">mdi-rocket</v-icon>
-                  <h3>Producto</h3>
-                </div>
-                <p>Soluón funcional que genera valor y satisface necesidades</p>
-              </div>
-
-              <!-- Línea de progreso -->
-              <div class="progress-line">
-                <div class="line" :style="{ width: isVisible ? '100%' : '0%' }"></div>
-              </div>
+        <v-row>
+          <v-col cols="12">
+            <div class="philosophy-summary glass">
+              <p class="summary-text">
+                Mi filosofía se centra en el <strong>producto final</strong> más que en la
+                complejidad técnica. Creo que el mejor desarrollo ocurre cuando entendemos que cada
+                línea de código es un medio para resolver problemas reales de usuarios reales.
+              </p>
             </div>
           </v-col>
         </v-row>
       </v-container>
     </section>
 
-    <!-- Sección 3: Stack tecnológico (visual) -->
-    <section class="stack-section">
+    <!-- Sección Stack Tecnológico -->
+    <section class="stack-section" aria-labelledby="stack-title">
       <v-container>
-        <div class="text-center mb-12">
-          <div class="section-label">
-            <v-icon size="18">mdi-tools</v-icon>
-            <span>Herramientas principales</span>
-          </div>
-          <h2 class="section-title">
-            Construyo con <span class="accent-text">tecnologías modernas</span>, <br />pero pienso
-            en <span class="accent-text">problemas atemporales</span>
-          </h2>
-          <p class="section-subtitle">
-            Estas son las herramientas que uso para materializar ideas, pero lo más importante es
-            saber cuándo y por qué usarlas.
-          </p>
-        </div>
+        <v-row>
+          <v-col cols="12">
+            <header class="section-header">
+              <h2 id="stack-title" class="section-title">
+                Stack <span class="text-accent">Tecnológico</span>
+              </h2>
+              <p class="section-subtitle">
+                <span class="text-accent">Herramientas y tecnologías</span> que utilizo para
+                construir proyectos
+              </p>
+            </header>
+          </v-col>
+        </v-row>
 
-        <!-- Stack visual -->
-        <div class="stack-visual">
-          <div class="stack-layer frontend-layer" :class="{ visible: stackVisible }">
-            <h3 class="layer-title">Frontend</h3>
-            <div class="tech-grid">
-              <div class="tech-item" v-for="tech in frontendTech" :key="tech.name">
-                <div class="tech-icon">
-                  <v-icon size="32">{{ tech.icon }}</v-icon>
-                </div>
-                <span class="tech-name">{{ tech.name }}</span>
-              </div>
-            </div>
-          </div>
+        <v-row class="stack-categories">
+          <!-- Frontend -->
+          <v-col cols="12" md="6" lg="3">
+            <article class="stack-category glass">
+              <h3 class="category-title">Frontend</h3>
+              <ul class="stack-list" aria-label="Tecnologías de Frontend">
+                <li class="stack-item">JavaScript (ES6+)</li>
+                <li class="stack-item">Vue 3 + Composition API + Script Setup</li>
+                <li class="stack-item">Pinia (En adopción)</li>
+                <li class="stack-item">Vuetify 3</li>
+                <li class="stack-item">Vue Router</li>
+                <li class="stack-item">HTML5 Semántico</li>
+                <li class="stack-item">CSS3 + Style Scoped</li>
+              </ul>
+            </article>
+          </v-col>
 
-          <div class="stack-layer backend-layer" :class="{ visible: stackVisible }">
-            <h3 class="layer-title">Backend & Tools</h3>
-            <div class="tech-grid">
-              <div class="tech-item" v-for="tech in backendTech" :key="tech.name">
-                <div class="tech-icon">
-                  <v-icon size="32">{{ tech.icon }}</v-icon>
-                </div>
-                <span class="tech-name">{{ tech.name }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          <!-- Backend & APIs -->
+          <v-col cols="12" md="6" lg="3">
+            <article class="stack-category glass">
+              <h3 class="category-title">Backend & APIs</h3>
+              <ul class="stack-list" aria-label="Tecnologías de Backend y APIs">
+                <li class="stack-item">Node.js</li>
+                <li class="stack-item">REST APIs</li>
+                <li class="stack-item">PostgreSQL</li>
+                <li class="stack-item">Postman</li>
+              </ul>
+            </article>
+          </v-col>
+
+          <!-- Comunicación & Gestión -->
+          <v-col cols="12" md="6" lg="3">
+            <article class="stack-category glass">
+              <h3 class="category-title">Comunicación & Gestión</h3>
+              <ul class="stack-list" aria-label="Herramientas de comunicación y gestión">
+                <li class="stack-item">Slack</li>
+                <li class="stack-item">Jira</li>
+                <li class="stack-item">Trello</li>
+              </ul>
+            </article>
+          </v-col>
+
+          <!-- Herramientas & Configuración -->
+          <v-col cols="12" md="6" lg="3">
+            <article class="stack-category glass">
+              <h3 class="category-title">Herramientas & Configuración</h3>
+              <ul class="stack-list" aria-label="Herramientas de desarrollo y configuración">
+                <li class="stack-item">Git + GitHub</li>
+                <li class="stack-item">Vite</li>
+                <li class="stack-item">ESLint</li>
+                <li class="stack-item">Prettier</li>
+                <li class="stack-item">Npm Scripts</li>
+              </ul>
+            </article>
+          </v-col>
+        </v-row>
       </v-container>
     </section>
 
-    <!-- Sección 4: Cierre inspiracional -->
+    <!-- Sección Sobre Mí -->
+    <section class="about-section" aria-labelledby="about-title">
+      <v-container>
+        <v-row align="center">
+          <v-col cols="12" lg="4">
+            <figure class="profile-image-container">
+              <img
+                src="@/assets/images/perfil/perfil.jpg"
+                alt="Foto de Agustin Dell Aquila - Desarrollador Frontend"
+                class="profile-image glass"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <figcaption class="visually-hidden">
+                Agustin Dell Aquila, Desarrollador Frontend
+              </figcaption>
+            </figure>
+          </v-col>
 
-    <!-- Mensaje inspiracional -->
-    <div class="inspiration-quote">
-      <v-icon size="64" color="primary" class="quote-icon">mdi-format-quote-open</v-icon>
-      <p class="quote-text">
-        "El mejor código no es el más complejo, sino el que mejor
-        <span class="accent-text">comunica una idea</span> y
-        <span class="accent-text">resuelve un problema</span>."
-      </p>
-      <div class="quote-author">
-        <div class="author-line"></div>
-        <span>— Mi enfoque de desarrollo</span>
-      </div>
-    </div>
-  </div>
+          <v-col cols="12" lg="8">
+            <article class="about-content">
+              <header>
+                <h2 id="about-title" class="section-title text-accent">Sobre Mí</h2>
+              </header>
+
+              <div class="about-text">
+                <p>
+                  Soy un <strong>Desarrollador Frontend Junior</strong> apasionado por crear
+                  experiencias digitales intuitivas y eficientes. Mi viaje en el desarrollo web
+                  comenzó con la curiosidad de entender cómo las ideas se transforman en
+                  aplicaciones funcionales que impactan a las personas.
+                </p>
+
+                <p>
+                  Lo que más me entusiasma de <span class="social-vue">Vue.js</span> y su ecosistema
+                  es la elegancia de su sintaxis y la capacidad para construir interfaces complejas
+                  manteniendo un código limpio y mantenible. Cada día busco aprender algo nuevo, ya
+                  sea una optimización de rendimiento, un patrón de diseño más eficiente o una mejor
+                  práctica de accesibilidad.
+                </p>
+
+                <p>
+                  Creo firmemente en el <strong>aprendizaje continuo</strong> y en que la mejor
+                  manera de crecer es enfrentando desafíos reales con equipos diversos. Mi objetivo
+                  es contribuir a proyectos significativos donde pueda aplicar mis habilidades
+                  mientras aprendo de desarrolladores más experimentados.
+                </p>
+              </div>
+
+              <blockquote class="quote-block glass mt-3">
+                <p class="quote-text">
+                  "El mejor código no es el más complejo, sino el que mejor comunica una idea y
+                  resuelve un problema."
+                </p>
+                <footer class="quote-footer">— Mi enfoque de desarrollo</footer>
+              </blockquote>
+            </article>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
+  </main>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-// Estados para animaciones
-const isVisible = ref(false)
-const stackVisible = ref(false)
-
-// Referencias a las secciones
-const heroSection = ref(null)
-const philosophySection = ref(null)
-
-// Archivo CV
-
-// Tecnologías frontend
-const frontendTech = [
-  { name: 'Vue.js 3', icon: 'mdi-vuejs' },
-  { name: 'Vuetify', icon: 'mdi-vuetify' },
-  { name: 'JavaScript', icon: 'mdi-language-javascript' },
-  { name: 'HTML5', icon: 'mdi-language-html5' },
-  { name: 'CSS3', icon: 'mdi-language-css3' },
-]
-
-// Tecnologías backend y tools
-const backendTech = [
-  { name: 'Node.js', icon: 'mdi-nodejs' },
-  { name: 'Git', icon: 'mdi-git' },
-  { name: 'PostgreSQL', icon: 'mdi-database-check' },
-  { name: 'REST API', icon: 'mdi-api' },
-  { name: 'VS Code', icon: 'mdi-microsoft-visual-studio-code' },
-]
-
-// Scroll functions
-const scrollToProjects = () => {
-  router.push('/projects')
-}
-
-const scrollToPhilosophy = () => {
-  philosophySection.value?.scrollIntoView({ behavior: 'smooth' })
-}
-
-// Observer para animaciones
-let observer
-
-onMounted(() => {
-  // Configurar Intersection Observer para animaciones
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.target.classList.contains('philosophy-visual')) {
-          if (entry.isIntersecting) {
-            isVisible.value = true
-          }
-        }
-        if (entry.target.classList.contains('stack-visual')) {
-          if (entry.isIntersecting) {
-            stackVisible.value = true
-          }
-        }
-      })
-    },
-    {
-      threshold: 0.3,
-      rootMargin: '0px 0px -100px 0px',
-    },
-  )
-
-  // Observar elementos
-  const philosophyVisual = document.querySelector('.philosophy-visual')
-  const stackVisual = document.querySelector('.stack-visual')
-
-  if (philosophyVisual) observer.observe(philosophyVisual)
-  if (stackVisual) observer.observe(stackVisual)
-})
-
-onUnmounted(() => {
-  if (observer) {
-    observer.disconnect()
-  }
-})
+/*porximamente... :) */
 </script>
 
 <style scoped>
-/* ===== VARIABLES Y ESTILOS BASE ===== */
 .home-view {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
-section {
-  padding: 120px 0;
-  position: relative;
-}
-
-@media (max-width: 960px) {
-  section {
-    padding: 80px 0;
-  }
-}
-
-/* ===== HERO SECTION ===== */
 .hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -347,547 +248,255 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
   z-index: -1;
-}
-
-.intro-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  border-radius: 24px;
-  margin-bottom: 32px;
-  backdrop-filter: blur(10px);
-  animation: fadeInUp 0.8s ease;
-}
-
-.badge-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(139, 92, 246, 0.9);
-  letter-spacing: 0.5px;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-
-.title-line {
-  display: block;
-}
-
-.accent-line {
-  color: rgba(139, 92, 246, 0.9);
-  position: relative;
-  display: inline-block;
-}
-
-.highlight {
-  position: relative;
-  color: #fff;
-}
-
-.highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: rgba(139, 92, 246, 0.3);
-  z-index: -1;
-  border-radius: 4px;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-.accent-text {
-  color: rgba(139, 92, 246, 0.9);
-  font-weight: 600;
-}
-
-.hero-actions {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
   display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 60px;
-  animation: fadeInUp 0.8s ease 0.6s both;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-actions .v-btn {
-    width: 100%;
-    max-width: 300px;
+  .hero-title {
+    font-size: 2rem;
   }
 }
 
-.primary-btn {
-  padding: 16px 32px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3px;
-  border-radius: 12px !important;
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
-  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3) !important;
-  transition: all 0.3s ease !important;
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-.primary-btn:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4) !important;
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.secondary-btn {
-  padding: 16px 32px !important;
-  font-weight: 500 !important;
-  border-radius: 12px !important;
-}
-
-.scroll-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  animation: fadeIn 1s ease 1s both;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(139, 92, 246, 0.8), transparent);
-}
-
-.scroll-icon {
-  color: rgba(139, 92, 246, 0.8);
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-}
-
-/* ===== PHILOSOPHY SECTION ===== */
-.section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  background: rgba(139, 92, 246, 0.1);
-  border-radius: 20px;
-  margin-bottom: 24px;
-  color: rgba(139, 92, 246, 0.9);
-  font-size: 0.9rem;
-  font-weight: 500;
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-
-.philosophy-content {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-  margin-bottom: 40px;
-}
-
-.philosophy-points {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.point {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.point h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.point p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-}
-
-/* Visualización de filosofía */
-.philosophy-visual {
-  position: relative;
-  padding-left: 40px;
-}
-
-.visual-container {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.glass-card {
-  background: rgba(30, 30, 40, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 24px;
-  position: relative;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.highlight-card {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.1));
-  border-color: rgba(139, 92, 246, 0.3);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.card-header h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.glass-card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-}
-
-/* Posicionamiento de las cards */
-.idea-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 280px;
-  transition-delay: 0.1s;
-}
-
-.design-card {
-  position: absolute;
-  top: 120px;
-  right: 0;
-  width: 280px;
-  transition-delay: 0.3s;
-}
-
-.dev-card {
-  position: absolute;
-  top: 240px;
-  left: 40px;
-  width: 280px;
-  transition-delay: 0.5s;
-}
-
-.product-card {
-  position: absolute;
-  top: 360px;
-  right: 20px;
-  width: 320px;
-  transition-delay: 0.7s;
-}
-
-.progress-line {
-  position: absolute;
-  top: 0;
-  left: 140px;
-  width: 2px;
-  height: 480px;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: -1;
-}
-
-.progress-line .line {
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(139, 92, 246, 0.8), transparent);
-  transition: width 1.5s ease;
-}
-
-@media (max-width: 960px) {
-  .philosophy-visual {
-    padding-left: 0;
-    margin-top: 60px;
-  }
-
-  .idea-card,
-  .design-card,
-  .dev-card,
-  .product-card {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: 100% !important;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .glass-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .progress-line {
-    display: none;
-  }
-}
-
-/* ===== STACK SECTION ===== */
-.stack-section {
-  background: rgba(10, 10, 15, 0.5);
-  border-radius: 40px;
-  margin: 0 20px;
-}
-
-@media (max-width: 960px) {
-  .stack-section {
-    margin: 0 12px;
-    border-radius: 24px;
-  }
+  margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.social-vue {
+  color: var(--color-social-vue);
+  font-weight: 600;
+}
+
+.philosophy-steps {
+  margin-bottom: 3rem;
+}
+
+.philosophy-card {
+  padding: 2rem;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.step-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.step-description {
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
-.stack-visual {
-  max-width: 1000px;
-  margin: 0 auto;
+.philosophy-summary {
+  padding: 2.5rem;
+  border-left: 4px solid var(--color-accent);
 }
 
-.stack-layer {
-  background: rgba(20, 20, 30, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 40px;
-  margin-bottom: 24px;
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+.summary-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-text);
 }
 
-.stack-layer.visible {
-  opacity: 1;
-  transform: translateX(0);
+.summary-text strong {
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
-.backend-layer {
-  transform: translateX(30px);
-  transition-delay: 0.3s;
+.stack-categories {
+  margin-top: 2rem;
 }
 
-.backend-layer.visible {
-  transform: translateX(0);
+.stack-category {
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.layer-title {
+.stack-category:hover {
+  transform: translateY(-3px);
+}
+
+.category-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 32px;
-  text-align: center;
-  color: rgba(139, 92, 246, 0.9);
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.2);
 }
 
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 24px;
+.stack-list {
+  list-style: none;
+  padding: 0;
 }
 
-.tech-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.tech-item:hover {
-  background: rgba(139, 92, 246, 0.1);
-  transform: translateY(-4px);
-}
-
-.tech-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-}
-
-.tech-name {
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.stack-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: rgba(139, 92, 246, 0.1);
-  border-radius: 12px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-}
-
-/* Quote inspiracional */
-.inspiration-quote {
-  text-align: center;
+.stack-item {
+  padding: 0.75rem 0;
+  color: var(--color-text-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
-  padding: 0 40px;
+  padding-left: 1.5rem;
 }
 
-.quote-icon {
-  margin-bottom: 20px;
-  opacity: 0.5;
+.stack-item:last-child {
+  border-bottom: none;
+}
+
+.stack-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.about-section {
+  padding-top: 4rem;
+}
+
+.profile-image-container {
+  text-align: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 3px solid rgba(139, 92, 246, 0.3);
+  padding: 5px;
+}
+
+.about-content {
+  padding-left: 2rem;
+}
+
+@media (max-width: 960px) {
+  .about-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+.about-text {
+  margin-top: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-text);
+}
+
+.about-text strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.quote-block {
+  padding: 2rem;
+  border-left: 4px solid var(--color-accent);
 }
 
 .quote-text {
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 24px;
-  position: relative;
+  color: var(--color-text-text);
+  margin-bottom: 1rem;
 }
 
-.quote-author {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
+.quote-footer {
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-align: right;
 }
 
-.author-line {
-  width: 40px;
+/* cnlase de utilidad para accesibilidad */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
   height: 1px;
-  background: rgba(139, 92, 246, 0.5);
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* ===== ANIMACIONES ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animciones sutiles */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .quote-text {
-    font-size: 1.2rem;
-    padding: 0 16px;
-  }
-}
-
-/* ===== ACCESSIBILITY ===== */
-@media (prefers-reduced-motion: reduce) {
-  .glass-card,
-  .stack-layer,
-  .v-btn,
-  .tech-item,
-  .social-icon {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .scroll-icon {
-    animation: none !important;
-  }
-}
-
-/* Focus states */
-.v-btn:focus-visible,
-.social-icon:focus-visible {
-  outline: 2px solid rgba(139, 92, 246, 0.8);
-  outline-offset: 2px;
-  border-radius: 4px;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

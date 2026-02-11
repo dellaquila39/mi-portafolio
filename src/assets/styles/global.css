@@ -203,4 +203,8 @@ body {
   /* Microsoft Teams */
   --color-social-teams: #6264a7;
   --color-social-teams-soft: rgba(98, 100, 167, 0.12);
+
+  /*Vue.js */
+  --color-social-vue: #42b883;
+  --color-social-vue-soft: rgba(66, 184, 131, 0.12);
 }

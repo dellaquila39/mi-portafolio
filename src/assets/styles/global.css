@@ -6,12 +6,18 @@
   /* Colores base */
   --color-bg-main: #0e0f13; /* negro/gris muy oscuro */
   --color-bg-surface: rgba(255, 255, 255, 0.06);
+  --color-bg-surface-medium: rgba(255, 255, 255, 0.04);
+  --color-bg-surface-dark: rgba(255, 255, 255, 0.02);
   --color-text-primary: #e5e7eb;
   --color-text-secondary: #9ca3af;
   --color-text-text: rgba(255, 255, 255, 0.8);
 
-  /* Acento */
+  /* colores diseño */
   --color-accent: #8b5cf6; /* violeta tech */
+  --color-accent-soft: rgba(139, 92, 246, 0.05);
+  --color-accent-dark: rgba(139, 92, 246, 0.2);
+  --color-accent-light: rgba(139, 92, 246, 0.1);
+  --color-accent-border: rgba(255, 255, 255, 0.1);
 
   /* Bordes y radios */
   --radius-sm: 8px;

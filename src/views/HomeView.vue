@@ -65,7 +65,7 @@
               <h3 class="step-title">Entrega de Valor</h3>
               <p class="step-description">
                 Cada commit debe aportar valor tangible. Optimizo procesos, automatizo tareas
-                repetitivas y documento decisiones técnicas para equipos futuros.
+                repetitivas y documento decisiones técnicas para proyectos futuros.
               </p>
             </article>
           </v-col>
@@ -226,9 +226,7 @@
   </main>
 </template>
 
-<script setup>
-/*porximamente... :) */
-</script>
+<script setup></script>
 
 <style scoped>
 .home-view {
@@ -249,7 +247,7 @@
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  background: var(--color-accent-soft);
   z-index: -1;
 }
 
@@ -323,7 +321,7 @@
 
 .philosophy-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px var(--color-bg-main);
 }
 
 .step-number {
@@ -383,7 +381,7 @@
   margin-bottom: 1.5rem;
   color: var(--color-accent);
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid rgba(139, 92, 246, 0.2);
+  border-bottom: 2px solid var(--color-accent-dark);
 }
 
 .stack-list {
@@ -394,7 +392,6 @@
 .stack-item {
   padding: 0.75rem 0;
   color: var(--color-text-text);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   padding-left: 1.5rem;
 }
@@ -426,7 +423,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto;
-  border: 3px solid rgba(139, 92, 246, 0.3);
+  border: 3px solid var(--color-accent-dark);
   padding: 5px;
 }
 

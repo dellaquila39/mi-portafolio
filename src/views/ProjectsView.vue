@@ -53,8 +53,6 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar sitio web Todo Mampara (se abre en nueva ventana)"
-              Explorar
-              proyecto
               >Explorar proyecto</v-btn
             >
           </v-card-actions>
@@ -70,6 +68,10 @@
 
             <!-- Content -->
             <h3 class="text-h5 text-surface font-weight-bold mb-3">Smart-Fly</h3>
+            <v-alert type="info" variant="tonal" density="comfortable" class="mb-3">
+              Desarrollo detenido temporalmente por decisión del cliente.
+            </v-alert>
+
             <p class="text-body-1 text-surface mb-4">
               Servicios de drones certificados para captura aérea de propiedades, resaltando
               espacios, entorno y valor visual mediante inspección y relevamiento aéreo.
@@ -94,7 +96,7 @@
               href="https://grand-beijinho-3b9cc0.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visitar sitio web Todo Mampara (se abre en nueva ventana)"
+              aria-label="Visitar sitio web Smart-Fly"
               >Explorar proyecto</v-btn
             >
           </v-card-actions>
@@ -141,9 +143,7 @@
               href="https://github.com/dellaquila39/comunicaci-n-cliente-servidor"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visitar sitio web Todo Mampara (se abre en nueva ventana)"
-              Explorar
-              proyecto
+              aria-label="Visitar sitio web Comunicación Cliente Servidor"
               >Ver codigo</v-btn
             >
           </v-card-actions>
@@ -154,7 +154,7 @@
     <!-- CTA -->
     <v-row class="mt-8 mt-md-12 mb-10" justify="center">
       <v-col cols="12" class="text-center">
-        <p class="text-body-1 text-primary mb-4">¿Quieres conocer más?</p>
+        <p class="text-body-1 text-text mb-4">¿Quieres conocer más?</p>
         <v-btn
           variant="outlined"
           color="accent"
@@ -178,27 +178,6 @@ import comunicacionclienteservidor from '@/assets/images/projects/comunicacion-c
 </script>
 
 <style scoped>
-/* Estilos mínimos y específicos solo para este componente */
-.bg-gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #6d28d9 100%);
-}
-
-.bg-gradient-purple {
-  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-}
-
-.bg-gradient-blue {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-}
-
-.bg-surface {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.text-surface {
-  color: var(--color-text-primary);
-}
-
 .h-100 {
   height: 100%;
 }

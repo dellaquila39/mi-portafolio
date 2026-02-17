@@ -98,12 +98,16 @@
               <v-expansion-panels variant="accordion" class="rounded-lg">
                 <v-expansion-panel class="glass-inner">
                   <v-expansion-panel-title
-                    class="text-body-1 font-weight-medium"
-                    :aria-expanded="false"
+                    class="text-body-1 font-weight-medium text-secondary"
                     :aria-controls="`acordeon-${education.id}`"
                   >
-                    <v-icon left aria-hidden start="true">mdi-book-open-variant</v-icon>
                     Ver materias y calificaciones
+
+                    <template #actions="{ expanded }">
+                      <v-icon class="color-icon">
+                        {{ expanded ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
+                      </v-icon>
+                    </template>
                   </v-expansion-panel-title>
                   <v-expansion-panel-text :id="`acordeon-${education.id}`" role="region">
                     <div class="pt-4">
@@ -115,13 +119,13 @@
                           class="subject-item pa-3 mb-2 rounded-lg"
                         >
                           <header class="subject-header mb-2 mb-sm-0">
-                            <h5 class="text-body-1 font-weight-medium">
+                            <h5 class="text-body-1 font-weight-medium mb-1">
                               {{ subject.name }}
                             </h5>
                             <time
                               v-if="subject.date"
                               :datetime="subject.date"
-                              class="text-body-2 text-secondary d-block"
+                              class="text-body-2 text-primary d-block"
                             >
                               {{ formatDate(subject.date) }}
                             </time>
@@ -166,8 +170,11 @@
       <v-col cols="12" md="8" lg="6" class="text-center">
         <div class="glass pa-5 pa-md-6">
           <v-icon size="48" color="accent" class="mb-4" aria-hidden="true">mdi-school</v-icon>
-          <p class="text-body-1 mb-3">Formarse es aprender a cuestionar, comprender y construir.</p>
-          <p class="text-body-3 text-primary">
+          <p class="text-body-1 mb-3">
+            Formarse es aprender a
+            <span class="text-accent">cuestionar, comprender y construir.</span>
+          </p>
+          <p class="text-body-3 text-text">
             Actualizando constantemente mis habilidades con cursos, prácticas y proyectos
           </p>
         </div>
@@ -309,8 +316,12 @@ const formatStatus = (status) => {
 <style scoped>
 /* Estilos mínimos y específicos */
 .glass-inner {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-surface-dark);
+  border: 1px solid var(--color-accent-dark);
+}
+
+.color-icon {
+  color: var(--color-accent);
 }
 
 /* Lista semántica de materias */
@@ -321,7 +332,7 @@ const formatStatus = (status) => {
 }
 
 .subject-item {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-bg-surface);
   transition: all 0.2s ease;
   border: 1px solid transparent;
   display: flex;
@@ -331,13 +342,14 @@ const formatStatus = (status) => {
 }
 
 .subject-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(139, 92, 246, 0.2);
+  background: var(--color-bg-surface-mediun);
+  border-color: var(--color-accent-dark);
 }
 
 .subject-header {
   flex: 1;
   min-width: 200px;
+  color: var(--color-text-primary);
 }
 
 /* KPIs semánticos */

@@ -39,12 +39,17 @@
                 <v-icon
                   size="48"
                   class="mb-3"
-                  :class="{ 'text-accent': activeChannel === channel.id }"
+                  :style="{
+                    color: activeChannel === channel.id ? `var(--color-social-${channel.id})` : '',
+                  }"
                   >{{ channel.icon }}</v-icon
                 >
                 <span
                   class="text-body-2"
-                  :class="{ 'text-accent font-weight-medium': activeChannel === channel.id }"
+                  :class="{ 'font-weight-medium': activeChannel === channel.id }"
+                  :style="{
+                    color: activeChannel === channel.id ? `var(--color-social-${channel.id})` : '',
+                  }"
                   >{{ channel.name }}</span
                 >
               </v-btn>
@@ -101,7 +106,7 @@
     <!-- final -->
     <v-row class="mx-0 mx-md-3 mt-8" justify="center">
       <v-col cols="12" md="8" lg="6" class="text-center">
-        <p class="text-body-3 text-primary">
+        <p class="text-body-3 text-text">
           Sin formularios, sin burocracia. Solo conversación directa cuando quieras.
         </p>
       </v-col>
@@ -113,7 +118,7 @@
 import { ref } from 'vue'
 
 // estado del canal activo
-const activeChannel = ref('whatsapp') // Por defecto WhatsApp para mejor UX
+const activeChannel = ref('whatsapp')
 
 // datos de los canales
 const channels = [
@@ -177,33 +182,28 @@ const getActiveChannel = () => {
   border-radius: var(--radius-sm);
 }
 
-.channel-btn:hover {
-  background-color: rgba(139, 92, 246, 0.05);
-  border-color: rgba(139, 92, 246, 0.2);
-}
-
 .channel-btn--active {
-  background-color: rgba(139, 92, 246, 0.1);
-  border-color: var(--color-accent);
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-text-text);
 }
 
 /* Panel contextual */
 .context-panel {
   background: var(--color-bg-surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-accent-border);
   border-left: 4px solid var(--social-color);
 }
 
 /* Botón de acción  */
 .action-btn {
-  background-color: var(--social-color) !important;
-  transition: all 0.3s ease !important;
-  border: 1px solid transparent !important;
+  background-color: var(--social-color);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .action-btn:hover {
-  background-color: var(--social-soft) !important;
-  border-color: var(--social-color) !important;
+  background-color: var(--social-soft);
+  border-color: var(--social-color);
   transform: translateY(-2px);
 }
 </style>

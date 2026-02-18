@@ -1,12 +1,25 @@
 <template>
-  <v-app-bar flat height="60" class="app-navbar">
+  <v-app-bar flat height="60" class="app-navbar" position="fixed">
     <v-container class="navbar-container">
       <v-row align="center" justify="space-between" no-gutters>
-        <!-- Marca -->
+        <!-- descarga cv -->
         <v-col cols="auto">
-          <div class="navbar-brand">
-            <span class="brand-name">Agustín</span>
-          </div>
+          <a
+            href="Agustin-Dell-Aquila.pdf"
+            target="_blank"
+            rel="noopener"
+            class="download-button"
+            aria-label="Descargar CV"
+          >
+            <div class="docs">
+              <v-icon size="18">mdi-file-document-outline</v-icon>
+              <span>Agustín CV</span>
+            </div>
+
+            <div class="download">
+              <v-icon size="22">mdi-tray-arrow-down</v-icon>
+            </div>
+          </a>
         </v-col>
 
         <!-- Links desktop -->
@@ -19,7 +32,7 @@
               variant="text"
               class="nav-btn"
             >
-              <v-icon left size="20">{{ item.icon }}</v-icon>
+              <v-icon class="mr-2" left size="20">{{ item.icon }}</v-icon>
               {{ item.text }}
             </v-btn>
           </nav>
@@ -70,10 +83,9 @@
       </v-row>
     </v-container>
   </v-app-bar>
-
   <!-- Menú móvil -->
-  <v-expand-transition>
-    <div v-if="menu" class="mobile-menu mobile-menu--absolute">
+  <v-slide-y-transition>
+    <div v-if="menu" class="mobile-menu">
       <v-container>
         <v-btn
           v-for="item in items"
@@ -88,7 +100,7 @@
         </v-btn>
       </v-container>
     </div>
-  </v-expand-transition>
+  </v-slide-y-transition>
 </template>
 
 <script setup>
@@ -107,11 +119,11 @@ const items = [
 <style scoped>
 /* ===== NAVBAR BASE ===== */
 .app-navbar {
-  background: rgba(20, 20, 30, 0.75);
+  background: var(--color-accent-light) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 28px;
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  border: 1px solid var(--color-accent-dark);
   margin: 12px auto;
   max-width: 1200px;
   width: calc(100% - 48px);
@@ -124,21 +136,74 @@ const items = [
   max-width: 1000px;
 }
 
-/* ===== MARCA ===== */
-.navbar-brand {
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  cursor: default;
+/* ===== descarga cv ===== */
+.download-button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 1;
+  color: var(--color-bg-main);
 }
 
-.brand-name {
-  color: #000000fb;
-  transition: color 0.7s ease;
+/* Parte visible */
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 18px;
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent-dark);
+  color: var(--color-text-text);
+  backdrop-filter: blur(16px);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.navbar-brand:hover .brand-name {
-  color: var(--color-accent);
+/* Fondo animado */
+.download-button .download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: var(--color-accent);
+  transform: translateY(0%);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: -1;
+  color: var(--color-bg-main);
+}
+
+/* Hover */
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download-button:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s ease;
+}
+
+/* Animación del icono */
+.download-button:hover .download .v-icon {
+  animation: bounceDown 0.8s ease infinite;
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* ===== LINKS ===== */
@@ -150,14 +215,14 @@ const items = [
 .nav-btn {
   font-size: 1rem;
   font-weight: 500;
-  color: black;
+  color: var(--color-text-text);
   border-radius: 14px;
   padding: 6px 14px;
 }
 
 .nav-btn:hover {
-  background: rgba(139, 92, 246, 0.15);
-  transform: translateY(-5px);
+  background: var(--color-accent-light);
+  transform: translateY(-7px);
   transition: transform 0.5s ease;
 }
 
@@ -173,61 +238,78 @@ const items = [
 }
 
 .icon-btn:hover {
-  background: rgba(139, 92, 246, 0.15);
-  transform: translateY(-5px);
+  background: var(--color-accent-light);
+  transform: translateY(-7px);
 }
 
 .linkedin {
-  color: #0a66c2;
+  color: var(--color-social-linkedin);
 }
 
 .github {
-  color: #333;
+  color: var(--color-social-github);
 }
 
 .whatsapp {
-  color: #25d366;
+  color: var(--color-social-whatsapp);
 }
 
 /* ===== MOBILE ===== */
 .mobile-menu {
-  background: rgba(20, 20, 30, 0.95);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(139, 92, 246, 0.15);
-  border-radius: 0 0 28px 28px;
-}
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  z-index: 999;
 
-.mobile-menu--absolute {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-  margin-top: 8px;
+  background: var(--color-accent-transp);
+  backdrop-filter: blur(20px);
+  border-radius: 0 0 28px 28px;
+  border: 1px solid var(--color-accent-dark);
 }
 
 .mobile-link {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--color-text-text) !important;
   margin-bottom: 8px;
 }
 
 .mobile-link:hover {
-  color: #8b5cf6 !important;
-  background: rgba(139, 92, 246, 0.1) !important;
+  color: var(--color-accent-dark) !important;
+  background: var(--color-accent-soft) !important;
+}
+
+.app-navbar :deep(.v-toolbar__content) {
+  overflow: visible;
+}
+
+.app-navbar :deep(.v-app-bar) {
+  overflow: visible;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .app-navbar {
-    max-width: calc(100% - 16px) !important;
-    width: calc(100% - 16px) !important;
-    margin: 8px auto !important;
+    max-width: calc(100% - 16px);
+    width: calc(100% - 16px);
+    margin: 8px auto;
   }
 
   .navbar-brand {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .download-button .docs span {
+    display: none; /* solo icono en mobile */
+  }
+
+  .download-button .docs {
+    padding: 0 12px;
+    min-height: 38px;
   }
 }
 

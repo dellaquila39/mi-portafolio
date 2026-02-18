@@ -17,6 +17,7 @@
   --color-accent-soft: rgba(139, 92, 246, 0.05);
   --color-accent-dark: rgba(139, 92, 246, 0.2);
   --color-accent-light: rgba(139, 92, 246, 0.1);
+  --color-accent-transp: rgba(139, 92, 246, 0);
   --color-accent-border: rgba(255, 255, 255, 0.1);
 
   /* Bordes y radios */
@@ -213,4 +214,8 @@ body {
   /*Vue.js */
   --color-social-vue: #42b883;
   --color-social-vue-soft: rgba(66, 184, 131, 0.12);
+
+  /*pdf (descarga CV) */
+  --color-social-pdf: #ea4335;
+  --color-social-pdf-soft: rgba(234, 67, 53, 0.12);
 }

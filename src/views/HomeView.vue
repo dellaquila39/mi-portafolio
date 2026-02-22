@@ -210,10 +210,10 @@
                 </p>
 
                 <p>
-                  Creo firmemente en el <strong>aprendizaje continuo</strong> y en que la mejor
-                  manera de crecer es enfrentando desafíos reales con equipos diversos. Mi objetivo
-                  es contribuir a proyectos significativos donde pueda aplicar mis habilidades
-                  mientras aprendo en conjunto con un equipo profesional.
+                  Creo firmemente en el <span class="text-accent">aprendizaje continuo</span> y en
+                  que la mejor manera de crecer es enfrentando desafíos reales con equipos diversos.
+                  Mi objetivo es contribuir a proyectos significativos donde pueda aplicar mis
+                  habilidades mientras aprendo en conjunto con un equipo profesional.
                 </p>
               </div>
 

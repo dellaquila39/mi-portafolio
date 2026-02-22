@@ -5,6 +5,7 @@
 
     <!-- Contenido central que cambia según la ruta -->
     <v-main>
+      <site-alert />
       <RouterView />
     </v-main>
 
@@ -17,6 +18,7 @@
 // Componentes globales de layout
 import AppNavbar from '@/components/AppNavbar.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import SiteAlert from '@/components/SiteAlert.vue'
 </script>
 
 <style scoped></style>

@@ -42,7 +42,7 @@
               <h3 class="step-title">Visión del Producto</h3>
               <p class="step-description">
                 Antes de empezar a programar, me tomo el tiempo de entender el objetivo del proyecto
-                y a quién está dirigido, para desarrollar soluciones que realmente aporten valor.
+                y a quién está dirigido, para desarrollar un producto que realmente aporten valor.
               </p>
             </article>
           </v-col>
@@ -53,8 +53,8 @@
               <h3 class="step-title">Arquitectura Iterativa</h3>
               <p class="step-description">
                 Trabajo en ciclos cortos, priorizando una base funcional desde el inicio. A partir
-                del feedback, voy mejorando la estructura del proyecto y agregando nuevas
-                funcionalidades de forma progresiva.
+                de la practica y el feedback, voy mejorando la estructura del proyecto y agregando
+                nuevas funcionalidades de forma progresiva.
               </p>
             </article>
           </v-col>
@@ -74,10 +74,15 @@
         <v-row>
           <v-col cols="12">
             <div class="philosophy-summary glass">
+              <h3>
+                <strong>
+                  <span class="text-accent">Mi Filosofía de Desarrollo </span>
+                </strong>
+              </h3>
               <p class="summary-text">
-                Mi filosofía se centra en el <strong>producto final</strong> más que en la
-                complejidad técnica. Creo que el mejor desarrollo ocurre cuando entendemos que cada
-                línea de código es un medio para resolver problemas reales de usuarios reales.
+                Más allá de la sintaxis, me apasiona el propósito de cada funcionalidad. Desarrollo
+                con el objetivo de que cada entrega sea una respuesta útil y efectiva a lo que el
+                usuario final realmente necesita.
               </p>
             </div>
           </v-col>
@@ -111,7 +116,7 @@
                 <li class="stack-item">JavaScript (ES6+)</li>
                 <li class="stack-item">Vue 3 + Composition API + Script Setup</li>
                 <li class="stack-item">Pinia (En adopción)</li>
-                <li class="stack-item">Vuetify 3</li>
+                <li class="stack-item">Vuetify</li>
                 <li class="stack-item">Vue Router</li>
                 <li class="stack-item">HTML5 Semántico</li>
                 <li class="stack-item">CSS3 + Style Scoped</li>
@@ -122,12 +127,10 @@
           <!-- Backend & APIs -->
           <v-col cols="12" md="6" lg="3">
             <article class="stack-category glass">
-              <h3 class="category-title">Backend & APIs</h3>
+              <h3 class="category-title">Backend Basico</h3>
               <ul class="stack-list" aria-label="Tecnologías de Backend y APIs">
-                <li class="stack-item">Node.js</li>
                 <li class="stack-item">REST APIs</li>
                 <li class="stack-item">PostgreSQL</li>
-                <li class="stack-item">Postman</li>
               </ul>
             </article>
           </v-col>
@@ -150,6 +153,7 @@
               <h3 class="category-title">Herramientas & Configuración</h3>
               <ul class="stack-list" aria-label="Herramientas de desarrollo y configuración">
                 <li class="stack-item">Git + GitHub</li>
+                <li class="stack-item">Sourcetree</li>
                 <li class="stack-item">Vite</li>
                 <li class="stack-item">ESLint</li>
                 <li class="stack-item">Prettier</li>
@@ -189,25 +193,27 @@
 
               <div class="about-text">
                 <p>
-                  Soy un <strong>Desarrollador Frontend Junior</strong> apasionado por crear
-                  experiencias digitales intuitivas y eficientes. Mi viaje en el desarrollo web
-                  comenzó con la curiosidad de entender cómo las ideas se transforman en
-                  aplicaciones funcionales que impactan a las personas.
+                  Soy <span class="text-accent">Desarrollador Frontend Junior</span>, pero antes de
+                  eso, soy alguien que disfruta encontrando el camino más sencillo para los
+                  problemas más complejos. Mi aventura en el código empezó por pura curiosidad:
+                  quería saber cómo una simple idea podía convertirse en algo que alguien, en
+                  cualquier lugar del mundo, pudiera usar en su pantalla.
                 </p>
 
                 <p>
-                  Lo que más me entusiasma de <span class="social-vue">Vue.js</span> y su ecosistema
-                  es la elegancia de su sintaxis y la capacidad para construir interfaces complejas
-                  manteniendo un código limpio y mantenible. Cada día busco aprender algo nuevo, ya
-                  sea una optimización de rendimiento, un patrón de diseño más eficiente o una mejor
-                  práctica de accesibilidad.
+                  Me especializo en <span class="social-vue">Vue.js</span> porque me encanta esa
+                  sensación de orden que ofrece. Disfruto de la elegancia de su sintaxis, pero sobre
+                  todo de cómo me permite construir interfaces potentes sin que el código se vuelva
+                  un caos. Cada día busco aprender algo nuevo, ya sea una optimización de
+                  rendimiento, un patrón de diseño más eficiente o una mejor práctica de
+                  accesibilidad.
                 </p>
 
                 <p>
                   Creo firmemente en el <strong>aprendizaje continuo</strong> y en que la mejor
                   manera de crecer es enfrentando desafíos reales con equipos diversos. Mi objetivo
                   es contribuir a proyectos significativos donde pueda aplicar mis habilidades
-                  mientras aprendo de desarrolladores más experimentados.
+                  mientras aprendo en conjunto con un equipo profesional.
                 </p>
               </div>
 

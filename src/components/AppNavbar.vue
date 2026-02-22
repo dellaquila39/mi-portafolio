@@ -5,15 +5,15 @@
         <!-- descarga cv -->
         <v-col cols="auto">
           <a
-            href="Agustin-Dell-Aquila.pdf"
+            href="Agustin-Frontend-Developer.pdf"
             target="_blank"
             rel="noopener"
             class="download-button"
             aria-label="Descargar CV"
           >
             <div class="docs">
-              <v-icon size="18">mdi-file-document-outline</v-icon>
-              <span>Agustín CV</span>
+              <v-icon size="25">mdi-download-circle</v-icon>
+              <span>AGUSTIN CV</span>
             </div>
 
             <div class="download">
@@ -164,6 +164,14 @@ const items = [
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* Alineamos la tipografía del texto dentro de .docs con los otros botones */
+.download-button .docs span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-text);
+  line-height: 1;
+}
+
 /* Fondo animado */
 .download-button .download {
   position: absolute;
@@ -172,7 +180,7 @@ const items = [
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  background: var(--color-accent);
+  background: var(--color-accent-light);
   transform: translateY(0%);
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   z-index: -1;

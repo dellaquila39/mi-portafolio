@@ -5,7 +5,7 @@
         <!-- descarga cv -->
         <v-col cols="auto">
           <a
-            href="Agustin-Frontend-Developer.pdf"
+            href="Agustin-DellAquila-CV.pdf.pdf"
             target="_blank"
             rel="noopener"
             class="download-button"

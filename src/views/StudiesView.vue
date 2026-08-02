@@ -249,17 +249,31 @@ const educationData = [
       'Formación orientada al desarrollo de software, arquitectura de sistemas y metodologías modernas de ingeniería.',
 
     subjects: [
-      { name: 'Redes de Datos', date: '2025-12-03', grade: 8, status: 'promoted' },
+      { name: 'Redes de Datos', date: '2025-08-', grade: 8, status: 'promoted' },
       {
         name: 'Fundamentos del Desarrollo de Software y Metodologías Ágiles',
-        date: '2025-09-24',
+        date: '2025-08-',
         grade: 10,
         status: 'promoted',
       },
-      { name: 'Arquitectura de Computadoras', date: '2025-07-30', grade: 10, status: 'promoted' },
-      { name: 'Fundamentos de la Computación', date: '2025-07-30', grade: 9, status: 'promoted' },
-      { name: 'Lógica', date: '2025-07-30', grade: 9, status: 'promoted' },
-      { name: 'Matemática Discreta', date: '2025-07-30', grade: 10, status: 'promoted' },
+      { name: 'Arquitectura de Computadoras', date: '2025-03-', grade: 10, status: 'promoted' },
+      { name: 'Fundamentos de la Computación', date: '2025-03-', grade: 9, status: 'promoted' },
+      { name: 'Lógica', date: '2025-03-', grade: 9, status: 'promoted' },
+      { name: 'Matemática Discreta', date: '2025-03-', grade: 10, status: 'promoted' },
+      { name: 'Estructura de Datos', date: '2026-03-', grade: 8, status: 'promoted' },
+      { name: 'Cultura Digital', date: '2026-03-', grade: null, status: 'completed' },
+      {
+        name: 'Elementos para la comprensión de lengua extranjera',
+        date: '2026-03-',
+        grade: 9,
+        status: 'promoted',
+      },
+      {
+        name: 'Taller de lectura y escritura académica',
+        date: '2026-03-',
+        grade: null,
+        status: 'completed',
+      },
     ],
   },
 ]

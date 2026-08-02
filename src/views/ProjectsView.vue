@@ -49,7 +49,7 @@
               color="primary"
               block
               append-icon="mdi-arrow-right"
-              href="https://www.todomampara.com"
+              href="https://todomampara.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar sitio web Todo Mampara (se abre en nueva ventana)"
@@ -93,7 +93,7 @@
               color="primary"
               block
               append-icon="mdi-arrow-right"
-              href="https://grand-beijinho-3b9cc0.netlify.app/"
+              href="https://smartfly-pro.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar sitio web Smart-Fly"
